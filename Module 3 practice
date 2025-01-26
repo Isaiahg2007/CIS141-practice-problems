@@ -1,0 +1,44 @@
+# 1. Prompt the user for a word. Then, prompt the user for how many times they'd like that word repeated
+#Use the skills you learned in this module to print the word the correct number of times.
+
+#2. Prompt the user for their name and their age. Calculate their age next year. Use string 
+#concatenation to print "Hello, <name>! You are <age1> years old. Next year, you will be <age2> years 
+#old."
+
+#3. Prompt the user for a sentence and a word to try to find in that sentence. Have the program print 
+#out whether the word was found in the sentence. (i.e. True or False)
+
+#4. Prompt the user for: a word, a first index, and a last index. Slice the word at the indexes 
+#provided by the user and print to the screen.
+
+#5. Print 3 words with a | character (called a pipe) in between them. Use the appropriate keyword 
+#argument in print() to do so.
+
+
+Tf1=input("Hello user, what is your name? ")
+Tf2=input("Hello "+ str(Tf1) +", what is your prompt? ")
+Tf3=int(input("How many times would you like "+ str(Tf2) + " repeated? "))
+print(str(Tf2)*int(Tf3))
+
+
+name=input("Hello user, what is your name? ")
+age1=int(input("Hello "+str(name)+"! What is your age? "))
+age2=(age1+(1))
+print(str(name)+", you are "+str(age1)+", next year you will be "+str(age2))
+
+
+sent1=input("What sentence do you want to input? ")
+print(sent1)
+word1=input("What word do you want to find in this sentence? ")
+print(word1 in sent1)
+
+
+wrd=str(input("What is the word you want to index? "))
+print(wrd)
+ind1=int(input("First index?"))
+ind2=int(input("Second index?"))
+
+print(wrd[ind1:ind2])
+
+
+print("Score 1", "Score 2", "Score 3", sep="|")
