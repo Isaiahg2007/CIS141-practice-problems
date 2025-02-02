@@ -30,14 +30,12 @@ else:
     print(False)
 
 age=int(input("What is your age?: "))
-if age<13:
-    print("You are allowed to see G rated movies")
-
-if age==13 or 17 and age<18 and age>13:
-    print("You can see PG-13 rated movies")
-
-if age==18 or age>18:
+if age>17:
     print("You can see R rated movies")
+elif age>12:
+    print("You can see PG-13 movies")
+else:
+    print("You can see G rated movies")
 
 total=int(input("What is your order amount?: "))
 
