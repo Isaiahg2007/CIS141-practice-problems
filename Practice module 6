@@ -1,0 +1,52 @@
+#1. Given a list of numbers, write code to iterate through the list and calculate the sum of all even numbers. Print the resulting sum.
+
+l=input("Please provide a list of positive numbers: ").split()
+print(l)
+a=0
+for i in l:
+    if int(i)%2==0:
+        a=a+int(i)
+print(a)
+
+#2. With a list of strings provided, write code that counts how many times the word "Olympic" appears in the list, and then print the count.
+
+l1=input("Please provide a sentence: ").split()
+b=0
+for word in l1:
+    if word=="Olympic":
+        b+=1
+print(b)
+
+#3. Given a list of strings, write code to create a new list that includes only the strings longer than three characters. Print the resulting filtered list.
+
+l2=input("Please provide a sentence: ").split()
+c=0
+for word2 in l2:
+    if len(word2)<=3:
+        l2.pop(c)
+    c+=1
+print(l2)
+
+#4. For a list of integers, write code that counts how many numbers are positive and how many are negative, then print both counts.
+
+l3=input("Please provide a list of numbers: ").split()
+print(l3)
+a1=0
+b1=0
+for num in l3:
+    if int(num)>0:
+        a1+=1
+    if int(num)<0:
+        b1+=1
+print("Positive numbers are: ", a1)
+print("Negative numbers are: ", b1)
+
+#5. For a list of integers, use a loop to build a new list where each element is the square of the corresponding element in the original list. Print the new list.
+l4=input("Please provide a list of numbers: ").split()
+a2=[]
+for i in l4:
+    q=int(i)*int(i)
+    a2.append(q)
+print("Squared numbers:", a2)
+
+
