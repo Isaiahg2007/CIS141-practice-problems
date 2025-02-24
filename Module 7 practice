@@ -1,0 +1,118 @@
+#1. Write a function called count_vowels(input) that takes a string
+#    and returns the number of vowels (a, e, i, o, u) in it.
+
+def count_vowels(input_string):
+    count = 0
+    for i in input_string:
+        if i=="a":
+            count+=1
+        if i=="e":
+            count+=1
+        if i=="i":
+            count+=1
+        if i=="o":
+            count+=1
+        if i=="u":
+            count+=1
+        if i=="A":
+            count+=1
+        if i=="E":
+            count+=1
+        if i=="I":
+            count+=1
+        if i=="O":
+            count+=1
+        if i=="U":
+            count+=1
+    return count
+
+input_str = input("Enter a string: ")
+print("Number of vowels: ", count_vowels(input_str))
+
+#2. Write a function called is_palindrome(s) that checks whether a string is a palindrome
+#    (reads the same forward and backward, ignoring case). The function should returns
+#    either True or False.
+def is_palindrome(s):
+    lower_s=s.lower()
+    flipped_s=lower_s[::-1]
+    return lower_s==flipped_s
+input_lower_s=input("Enter your word to see if its a palindrome!: ")
+print(is_palindrome(input_lower_s))
+#3. In the game Pokemon, certain types of Pokemon do extra damage to other types.
+#    For example, water is very effective to fight fire.
+#    Write a function called type_advantage(attacker, defender) that takes two Pokémon types as
+#    strings and returns "Super Effective", "Not Very Effective", or "Neutral" based on
+#    simple type effectiveness rules. Your solution only needs to work for these three sets of input:
+#    print(type_advantage("Water", "Fire"))  # "Super Effective"
+#    print(type_advantage("Fire", "Water"))  # "Not Very Effective"
+#    print(type_advantage("Electric", "Grass"))  # "Neutral"
+
+attacker=input("What is the attacker? ")
+defender=input("What is the defender? ")
+lower_attacker=attacker.lower()
+lower_defender=defender.lower()
+def type_advantage(attacker,defender):
+    if attacker=="fire":
+        if defender=="water":
+            return "Not very effective"
+    if attacker=="water":
+        if defender=="fire":
+            return "Very effective"
+    if attacker=="electric":
+        if defender=="grass":
+            return "Neutral"
+    else:
+        print("Not a option, try again please!")
+        attacker=input("What is the attacker? ")
+        defender=input("What is the defender? ")
+        print(type_advantage(attacker,defender))
+
+print(type_advantage(lower_attacker,lower_defender))
+
+#4. Write a function called ferry_fare(age, vehicle) that calculates the Washington State Ferry fare
+#    based on age and whether the person has a vehicle. Assume the following rates:
+#    * Adults (19-64): $10 without a vehicle, $20 with a vehicle.
+#    * Seniors (65+): $5 without a vehicle, $15 with a vehicle.
+#    * Children (0-18): Free.
+
+age=(int(input("Hello! How old are you?: ")))
+vehicle=input("And do you have a vehicle? Yes or No: ")
+#Yes=1
+#No=2
+#Children=("Children 0-18")
+#Seniors=("Seniors 65+")
+#Adults=("Adults 19-64")
+def ferry_fare(age,vehicle):
+    if age>=65:
+        if vehicle=="No":
+            return("Alright, that will be 5 dollars without a vehicle. Enjoy your trip aboard the Washington State ferries!")
+        if vehicle=="Yes": 
+            return("Alright, that will be 15 dollars. Enjoy your trip aboard the Washington State ferries!")
+    if age<=19:
+        return("Alright, then your trip is free! Enjoy your trip aboard the Washington State ferries!")
+    else: 
+        age==range(19,64)
+        if vehicle=="No":
+            return("Alright, that will be 10 dollars without a vehicle. Enjoy your trip aboard the Washington State ferries!")
+        if vehicle=="Yes": 
+            return("Alright, that will be 20 dollars. Enjoy your trip aboard the Washington State ferries!")
+print(ferry_fare(age,vehicle))
+
+
+#5. Write a function called level_up(experience) that takes a player's experience points
+#    and returns their new level based on these rules:
+#    * 0-99 XP → Level 1
+#    * 100-199 XP → Level 2
+#    * 200+ XP → Level 3
+experience=int(input("What is you xp amount?: "))
+
+def level_up(experience):
+    if experience<=99:
+        return("You are level 1!")
+    if experience>=200: 
+        return("You are level 3!")
+    else:
+        experience==range(100,199)
+        return("You are level two!")
+print(level_up(experience))
+
